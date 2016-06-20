@@ -12,8 +12,8 @@ function replace_quote() {
 	console.log(quoteIndex);
 	console.log(authorIndex);
 	
-	document.getElementById("daily_quote").innerHTML = randomQuote;
-	document.getElementById("daily_quote_author").innerHTML = author;
+	document.getElementById("daily_quote_pun").innerHTML = randomQuote;
+	document.getElementById("daily_quote_pun_author").innerHTML = author;
     };
     request.open("GET", "assets/quotes-list.txt", true);
     request.send();
