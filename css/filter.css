@@ -1,0 +1,17 @@
+.filterDiv{
+    display: none;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+    display: block;
+}
+
+.dropdown-menu {
+}
+
+.dropdown-item {
+    margin-left: 6%;
+    margin-bottom: 5px;
+    width: 90%;
+}
