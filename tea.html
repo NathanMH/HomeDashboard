@@ -2,8 +2,13 @@
 
 <head>
 	<title>Chez Lara et Nate</title>
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	 crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	 crossorigin="anonymous"></script>
+
 	<script type="text/javascript" src="js/live.js"></script>
 	<script type="text/javascript" src="js/change-jumbotron.js"></script>
 	<script type="text/javascript" src="js/filter-list.js"></script>
@@ -16,64 +21,38 @@
 </head>
 
 <body>
-
 	<!-- Navbar -->
-	<nav class="navbar navbar-default">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#home-server-navbar-collapse-1">
-					<span class="icon-bar"></span>
-				</button>
-			</div>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+		<a class="navbar-brand" href="/">L&N</a>
+		<ul class="navbar-nav">
+			<li class="nav-item dropdown">
+				<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+					Drink Menu
+					<span class="caret"></span>
+				</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="tea.html">Tea List</a>
+					<a class="dropdown-item" href=" /alcohol.html">Alcohol</a>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="http://192.168.0.1">Router</a>
+			</li>
 
-			<div class="collapse navbar-collapse" id="home-server-navbar-collapse-1">
-				<ul class="nav navbar-nav">
-					<li>
-						<a href="/">Home</a>
-					</li>
-					<li class="dropdown active">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Drink Menu
-							<span class="caret"></span>
-						</a>
-						<ul class="dropdown-menu" role="menu">
-							<li>
-								<a href="tea.html">Tea List</a>
-							</li>
-							<li>
-								<a href="/alcohol.html">Alcohols</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="http://192.168.0.1">Router</a>
-					</li>
-
-					<!-- Samba link not working yet 
-	    <li><a href="smp://tplinklogin.net/volume1/GooberDrive/">GooberDrive - Mac</a></li>
-	    <li><a href="file:///tplinklogin.net/volume1/GooberDrive/">GooberDrive - Windows</a></li>
-	    -->
-
-					<li>
-						<a href="http://192.168.0.16/admin/">Pi-Hole</a>
-					</li>
-					<li>
-						<a href="#">GooberDrive</a>
-					</li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">WebDev Previews
-							<span class="caret"></span>
-						</a>
-						<ul class="dropdown-menu" role="menu">
-							<li>
-								<a href="http://192.168.1.100:81">MusicNate</a>
-							</li>
-							<li>
-								<a href="http://192.168.1.100:82">ProntoMusica</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
+			<li class="nav-item">
+				<a class="nav-link" href="http://192.168.0.16/admin/">Pi-Hole</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+					WebDev Previews
+					<span class="caret"></span>
+				</a>
+				<div class="nav-item dropdown-menu" role="menu">
+					<a class="dropdown-item" href="http://192.168.1.100:81">MusicNate</a>
+					<a class="dropdown-item" href="http://192.168.1.100:82">ProntoMusica</a>
+				</div>
+			</li>
+		</ul>
 		</div>
 	</nav>
 
@@ -87,34 +66,32 @@
 	</div>
 
 	<div class="container">
-		<div class="row">
-
+		<div class="row-fluid">
 			<!-- Control buttons -->
-			<div class="btn-group" role="toolbar">
+			<div class="text-center">
+				<div class="btn-group" role="toolbar">
+					<button type="button" class="btn btn-primary" onclick="filterSelection('all')">Show All</button>
+					<button type="button" class="btn btn-primary" onclick="filterSelection('black')">Black</button>
+					<button type="button" class="btn btn-primary" onclick="filterSelection('herbal')">Herbal</button>
+					<button type="button" class="btn btn-primary" onclick="filterSelection('rooibos')">Rooibos</button>
+					<button type="button" class="btn btn-primary" onclick="filterSelection('green')">Green</button>
+					<button type="button" class="btn btn-primary" onclick="filterSelection('chai')">Chai</button>
+					<button type="button" class="btn btn-primary" onclick="filterSelection('caffeineFree')">Caffeine Free</button>
 
-				<button type="button" class="btn btn-primary" onclick="filterSelection('all')">Show All</button>
-				<button type="button" class="btn btn-primary" onclick="filterSelection('black')">Black</button>
-				<button type="button" class="btn btn-primary" onclick="filterSelection('herbal')">Herbal</button>
-				<button type="button" class="btn btn-primary" onclick="filterSelection('rooibos')">Rooibos</button>
-				<button type="button" class="btn btn-primary" onclick="filterSelection('green')">Green</button>
-				<button type="button" class="btn btn-primary" onclick="filterSelection('chai')">Chai</button>
-				<button type="button" class="btn btn-primary" onclick="filterSelection('caffeineFree')">Caffeine Free</button>
-
-				<div class="btn-group" role="group">
-					<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-						Brands
-					</button>
-					<div class="dropdown-menu">
-						<button class="dropdown-item btn-primary" onclick="filterSelection('granvilleIsland')">Granville Island</button>
-						<button class="dropdown-item btn-primary" onclick="filterSelection('twinings')">Twinings</button>
-						<button class="dropdown-item btn-primary" onclick="filterSelection('pc')">Presidents Choice</button>
-						<button class="dropdown-item btn-primary" onclick="filterSelection('mightyLeaf')">Mighty Leaf</button>
-						<button class="dropdown-item btn-primary" onclick="filterSelection('stash')">Stash</button>
-						<button class="dropdown-item btn-primary" onclick="filterSelection('other')">Other</button>
+					<div class="btn-group dropdown">
+						<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+							Brands
+							<span class="caret"></span>
+						</button>
+						<div class="dropdown-menu">
+							<button class="dropdown-item btn-primary" onclick="filterSelection('twinings')">Twinings</button>
+							<button class="dropdown-item btn-primary" onclick="filterSelection('pc')">Presidents Choice</button>
+							<button class="dropdown-item btn-primary" onclick="filterSelection('mightyLeaf')">Mighty Leaf</button>
+							<button class="dropdown-item btn-primary" onclick="filterSelection('stash')">Stash</button>
+							<button class="dropdown-item btn-primary" onclick="filterSelection('other')">Other</button>
+						</div>
 					</div>
 				</div>
-
-
 			</div>
 		</div>
 
@@ -124,6 +101,7 @@
 			<div class="list-group-item filterDiv twinings black">Twinings -Blackcurrant</div>
 			<div class="list-group-item filterDiv twinings black">Twinings - Earl Grey</div>
 			<div class="list-group-item filterDiv twinings chai caffeineFree">Twinings - Chai (Caffeine Free)</div>
+			<div class="list-group-item filterDiv twinings herbal">Twinings - Pure Camomile</div>
 			<div class="list-group-item filterDiv pc green">PC - Green Tea</div>
 			<div class="list-group-item filterDiv pc chai">PC - Chocolatey Chai</div>
 			<div class="list-group-item filterDiv stash herbal">Stash - Cinnamon Vanilla</div>
@@ -132,7 +110,7 @@
 			<div class="list-group-item filterDiv secondCup rooibos caffeineFree">Second Cup - Spiced Orange Rooibos (Caffeine Free)</div>
 			<div class="list-group-item filterDiv tazo rooibos caffeineFree">Tazo - Vanilla Rooibos Parfait (Caffeine Free)</div>
 			<div class="list-group-item filterDiv tega rooibos caffeineFree">Tega - Orange Spice Rooibos with Ginger (Caffeine Free)</div>
-
+			<div class="list-group-item filterDiv green">T&T - Green Tea</div>
 
 			<div class="list-group-item filterDiv granvilleIsland">Granville Island - Cherry (White)</div>
 			<div class="list-group-item filterDiv granvilleIsland black">Granville Island - Peach Apricot</div>
@@ -159,12 +137,13 @@
 			<div class="list-group-item filterDiv other">A.C. Perch's Thehandel - Breakfast Tea</div>
 			<div class="list-group-item filterDiv other caffeineFree">Pluck - Apple Crumble</div>
 			<div class="list-group-item filterDiv other green">Level Ground Trading - Green</div>
+			<div class="list-group-item filterDiv other herbal">Clef des Champs - Licorice</div>
 		</div>
 
 	</div>
 	</div>
 
-	<div class="navbar-fixed-bottom">
+	<div class="navbar fixed-bottom ">
 		<p>&copy; 2018 Nathan Mador-House</p>
 	</div>
 

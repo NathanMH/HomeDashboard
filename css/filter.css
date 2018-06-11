@@ -7,11 +7,8 @@
     display: block;
 }
 
-.dropdown-menu {
-}
-
 .dropdown-item {
-    margin-left: 6%;
-    margin-bottom: 5px;
+    /* margin-left: 6%; */
+    /* margin-bottom: 5px; */
     width: 90%;
 }

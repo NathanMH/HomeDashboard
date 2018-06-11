@@ -6,135 +6,637 @@
 	<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
 	<script type="text/javascript" src="js/live.js"></script>
 	<script type="text/javascript" src="js/change-jumbotron.js"></script>
+	<script type="text/javascript" src="js/filter-list.js"></script>
 	<script type="text/javascript" src="js/jquery.simpleWeather.js"></script>
 	<script type="text/javascript" src="js/home-weather-function.js"></script>
 	<script type="text/javascript" src="js/comments.js"></script>
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" href="css/override.css">
+	<link rel="stylesheet" href="css/filter.css">
 </head>
 
 <body>
 
 	<!-- Navbar -->
-	<nav class="navbar navbar-default">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#home-server-navbar-collapse-1">
-					<span class="icon-bar"></span>
-				</button>
-			</div>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+		<a class="navbar-brand" href="/">L&N</a>
+		<ul class="navbar-nav">
+			<li class="nav-item dropdown">
+				<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+					Drink Menu
+					<span class="caret"></span>
+				</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="tea.html">Tea List</a>
+					<a class="dropdown-item" href=" /alcohol.html">Alcohol</a>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="http://192.168.0.1">Router</a>
+			</li>
 
-			<div class="collapse navbar-collapse" id="home-server-navbar-collapse-1">
-				<ul class="nav navbar-nav">
-					<li>
-						<a href="/">Home</a>
-					</li>
-					<li class="dropdown active">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Drink Menu
-							<span class="caret"></span>
-						</a>
-						<ul class="dropdown-menu" role="menu">
-							<li>
-								<a href="tea.html">Tea List</a>
-							</li>
-							<li>
-								<a href="/alcohol.html">Alcohols</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="http://192.168.0.1">Router</a>
-					</li>
-
-					<!-- Samba link not working yet 
-	    <li><a href="smp://tplinklogin.net/volume1/GooberDrive/">GooberDrive - Mac</a></li>
-	    <li><a href="file:///tplinklogin.net/volume1/GooberDrive/">GooberDrive - Windows</a></li>
-	    -->
-
-					<li>
-						<a href="http://192.168.0.16/admin/">Pi-Hole</a>
-					</li>
-					<li>
-						<a href="#">GooberDrive</a>
-					</li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">WebDev Previews
-							<span class="caret"></span>
-						</a>
-						<ul class="dropdown-menu" role="menu">
-							<li>
-								<a href="http://192.168.1.100:81">MusicNate</a>
-							</li>
-							<li>
-								<a href="http://192.168.1.100:82">ProntoMusica</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
+			<li class="nav-item">
+				<a class="nav-link" href="http://192.168.0.16/admin/">Pi-Hole</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+					WebDev Previews
+					<span class="caret"></span>
+				</a>
+				<div class="nav-item dropdown-menu" role="menu">
+					<a class="dropdown-item" href="http://192.168.1.100:81">MusicNate</a>
+					<a class="dropdown-item" href="http://192.168.1.100:82">ProntoMusica</a>
+				</div>
+			</li>
+		</ul>
 		</div>
 	</nav>
 
 	<!-- Body -->
 	<div class="jumbotron">
 		<div class="container">
-			<h1> Chez Lara & Nate.</h1>
-
-			<h2 id="daily_quote_pun">
-				<p>The soul may be a mere pretence,</p>
-				<p> the mind makes very little sense.</p>
-				<p> So let us value the appeal,</p>
-				<p> of that which we can taste and feel.</p>
-			</h2>
-			<h3 id="daily_quote_pun_author"></h3>
-
-			<input type="button" class="btn btn-default" id="quote_button" onclick="replace_quote()" value="Gimme a Quote!">
-			<input type="button" class="btn btn-default" id="pun_button" onclick="replace_pun()" value="Gimme a Pun!">
-			<input type="button" class="btn btn-default" id="pun_button" onclick="replace_joke()" value="Gimme a Joke!">
+			<h1> Chez Lara & Nate</h1>
+			<h2>Booze!</h2>
 
 		</div>
 	</div>
 
 	<div class="container">
-		<div class="row">
+		<div class="row-fluid">
+			<!-- Control buttons -->
+			<div class="text-center">
+				<div class="btn-group" role="toolbar">
+					<button type="button" class="btn btn-primary" onclick="filterSelection( 'all')">Show All</button>
+					<button type="button" class="btn btn-primary" onclick="filterSelection( 'liquor')">Liquor</button>
+					<button type="button" class="btn btn-primary" onclick="filterSelection( 'mixed')">Cocktails</button>
+					<button type="button" class="btn btn-primary" onclick="filterSelection( 'bitters')">Bitters</button>
+					<button type="button" class="btn btn-primary" onclick="filterSelection( 'beer')">Beer</button>
+				</div>
+			</div>
+		</div>
 
-			<div class="col-md-6">
-				<div id="weather"></div>
+		<!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+		<div class="container">
+			<div class="list-group-item filterDiv liquor">Georgian Bay - Gin</div>
+			<div class="list-group-item filterDiv liquor">Captain Morgan- White Rum</div>
+			<div class="list-group-item filterDiv liquor">Bailey's - Irish Creme</div>
+			<div class="list-group-item filterDiv liquor">Top Shelf - Gin</div>
+			<div class="list-group-item filterDiv liquor">Top Shelf - Vodka</div>
+			<div class="list-group-item filterDiv liquor">Polar Ice - Vodka</div>
+			<div class="list-group-item filterDiv liquor">Kahlua - Coffee Liqueur</div>
+			<div class="list-group-item filterDiv liquor">Guinness - Creme de Menthe</div>
+			<div class="list-group-item filterDiv liquor">Liberty - Gin</div>
+			<div class="list-group-item filterDiv liquor">Glen Morray - 15 yr Scotch</div>
+			<div class="list-group-item filterDiv liquor">Alberta Premium - Whiskey</div>
+
+			<div class="list-group-item filterDiv liquor">Triple Sec</div>
+			<div class="list-group-item filterDiv liquor">Campari</div>
+			<div class="list-group-item filterDiv liquor">Sweet Vermouth</div>
+			<div class="list-group-item filterDiv liquor">Dry Vermouth</div>
+
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#negroni
+					" aria-expanded="false" aria-controls="collapseExample">
+				<!-- Drink goes here -->
+				Negroni
+			</button>
+			<div class="collapse" id="negroni">
+				<div class="card card-body row">
+					<div class="row">
+						<!-- Recipe goes here -->
+						<ul class="col">
+							<li>Gin</li>
+							<li>Campari</li>
+							<li>Red Vermouth</li>
+							<li>Orange Garnish</li>
+							<li>Ice</li>
+						</ul>
+						<ol class="col">
+							<li>Fill rocks glass with ice</li>
+							<li>Shake Gin (30ml), Vermouth (30ml), and Campari (30ml)</li>
+							<li>Strain into glass and garnish</li>
+						</ol>
+					</div>
+				</div>
 			</div>
 
-			<div class="col-md-6">
-
-				<form class="form-horizontal">
-					<fieldset>
-
-						<div class="form-group">
-							<label for="inputName" class="col-lg-2 control-label">Name</label>
-							<div class="col-lg-10">
-								<input class="form-control" id="inputName" placeholder="Name" type="text">
-							</div>
-						</div>
-
-						<div class="form-group">
-							<label for="commentArea" class="col-lg-2 control-label">Comment</label>
-							<div class="col-lg-10">
-								<textarea class="form-control" rows="4" id="commentArea" placeholder="Comment goes here..."></textarea>
-							</div>
-						</div>
-
-						<div class="form-group">
-							<div class="col-lg-10 col-lg-offset-2">
-								<button type="submit" class="btn btn-primary" id="submit-button">Submit</button>
-							</div>
-						</div>
-
-					</fieldset>
-				</form>
-
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#gt
+					" aria-expanded="false" aria-controls="collapseExample">
+				<!-- Drink goes here -->
+				Gin & Tonic
+			</button>
+			<div class="collapse" id="gt">
+				<div class=" card card-body">
+					<div class="row">
+						<!-- Recipe goes here -->
+						<ul class="col">
+							<li>Gin</li>
+							<li>Tonic</li>
+							<li>Lime Garnish</li>
+							<li>Ice</li>
+						</ul>
+						<ol class="col">
+							<li>Fill highball glass with ice</li>
+							<li>Pour Gin (50ml) and Tonic (100ml)</li>
+							<li>Stir ang garnish</li>
+						</ol>
+					</div>
+				</div>
 			</div>
+
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#sneakypete
+					" aria-expanded="false" aria-controls="collapseExample">
+				<!-- Drink goes here -->
+				Sneaky Pete
+			</button>
+			<div class="collapse" id="sneakypete">
+				<div class=" card card-body">
+					<div class="row">
+						<!-- Recipe goes here -->
+						<ul class="col">
+							<li>Whiskey</li>
+							<li>Coffee Liqueur</li>
+							<li>Milk</li>
+							<li>Ice</li>
+						</ul>
+						<ol class="col">
+							<li>Fill rocks glass with ice</li>
+							<li>Pour Whiskey (30ml), Coffee Liqueur (30ml), and Milk/Cream (30ml)</li>
+							<li>Stir</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#whitelady
+					" aria-expanded="false" aria-controls="collapseExample">
+				<!-- Drink goes here -->
+				White Lady
+			</button>
+			<div class="collapse" id="whitelady">
+				<div class=" card card-body">
+					<div class="row">
+						<!-- Recipe goes here -->
+						<ul class="col">
+							<li>Gin</li>
+							<li>Triple Sec</li>
+							<li>Lemon</li>
+							<li>Ice</li>
+						</ul>
+						<ol class="col">
+							<li>Fill shaker with ice, Gin (40ml) Triple Sec (30ml), and Lemon juice (20ml)</li>
+							<li>Shake and strain into cocktail glass</li>
+							<li>Garnish with Lemon peel</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#whiterussian
+					" aria-expanded="false" aria-controls="collapseExample">
+				<!-- Drink goes here -->
+				White Russian
+			</button>
+			<div class="collapse" id="whiterussian">
+				<div class=" card card-body">
+					<div class="row">
+						<!-- Recipe goes here -->
+						<ul class="col">
+							<li>Vodka</li>
+							<li>Coffee Liqueur</li>
+							<li>Cream</li>
+							<li>Ice</li>
+						</ul>
+						<ol class="col">
+							<li>Fill rocks glass with ice</li>
+							<li>Pour Vodka (30ml), Coffee Liqueur (30ml), and Cream (30ml)</li>
+							<li>Stir</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#blackrussian
+					" aria-expanded="false" aria-controls="collapseExample">
+				<!-- Drink goes here -->
+				Black Russian
+			</button>
+			<div class="collapse" id="blackrussian">
+				<div class=" card card-body">
+					<div class="row">
+						<!-- Recipe goes here -->
+						<ul class="col">
+							<li>Vodka</li>
+							<li>Coffee Liqueur</li>
+							<li>Ice</li>
+						</ul>
+						<ol class="col">
+							<li>Fill rocks glass with ice</li>
+							<li>Pour Vodka (50ml) and Coffee Liqueur (20ml)</li>
+							<li>Stir</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#kamikaze
+					" aria-expanded="false" aria-controls="collapseExample">
+				<!-- Drink goes here -->
+				Kamikaze
+			</button>
+			<div class="collapse" id="kamikaze">
+				<div class=" card card-body">
+					<div class="row">
+						<!-- Recipe goes here -->
+						<ul class="col">
+							<li>Vodka</li>
+							<li>Triple Sec</li>
+							<li>Lime</li>
+							<li>Ice</li>
+						</ul>
+						<ol class="col">
+							<li>Fill shaker with ice, Vodka (30ml), Triple Sec (30ml), and Lime juice (30ml)</li>
+							<li>Shake and strain into cocktail glass</li>
+							<li>Garnish</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#martini
+					" aria-expanded="false" aria-controls="collapseExample">
+				<!-- Drink goes here -->
+				Martini
+			</button>
+			<div class="collapse" id="martini">
+				<div class=" card card-body">
+					<div class="row">
+						<!-- Recipe goes here -->
+						<ul class="col">
+							<li>Vodka / Gin</li>
+							<li>Dry Vermouth</li>
+							<li>Olive</li>
+							<li>Ice</li>
+						</ul>
+						<ol class="col">
+							<li>Fill shaker with ice, Gin/Vodka (60ml), and Dry Vermouth (10ml)</li>
+							<li>Stir well and strain into cocktail glass</li>
+							<li>Garnish with olive</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#mintjulep
+					" aria-expanded="false" aria-controls="collapseExample">
+				<!-- Drink goes here -->
+				Mint Julep
+			</button>
+			<div class="collapse" id="mintjulep">
+				<div class=" card card-body">
+					<div class="row">
+						<!-- Recipe goes here -->
+						<ul class="col">
+							<li>Vodka</li>
+							<li>Sugar</li>
+							<li>Mint</li>
+							<li>Ice</li>
+						</ul>
+						<ol class="col">
+							<li>Put sugar (1tsp) and mint into rocks glass</li>
+							<li>Pour small amount of Bourbon/Vodka and muddle</li>
+							<li>Fill glass with ice and add Bourbon/Vodka (50ml)</li>
+							<li>Garnish with mint</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#mojito
+					" aria-expanded="false" aria-controls="collapseExample">
+				<!-- Drink goes here -->
+				Mojito
+			</button>
+			<div class="collapse" id="mojito">
+				<div class=" card card-body">
+					<div class="row">
+						<!-- Recipe goes here -->
+						<ul class="col">
+							<li>White Rum</li>
+							<li>Lime</li>
+							<li>Mint</li>
+							<li>Sugar</li>
+							<li>Soda</li>
+							<li>Ice</li>
+						</ul>
+						<ol class="col">
+							<li>Put several sprigs of mint and sugar (2tsp) into highball glass</li>
+							<li>Add Lime juice (30ml) and muddle</li>
+							<li>Fill glass with crushed ice</li>
+							<li>Pour Rum (40ml) and top with Soda (100ml)</li>
+							<li>Garnish with mint</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#mudslide
+					" aria-expanded="false" aria-controls="collapseExample">
+				<!-- Drink goes here -->
+				Mudslide
+			</button>
+			<div class="collapse" id="mudslide">
+				<div class=" card card-body">
+					<div class="row">
+						<!-- Recipe goes here -->
+						<ul class="col">
+							<li>Vodka</li>
+							<li>Coffee Liqueur</li>
+							<li>Bailey's</li>
+							<li>Ice</li>
+						</ul>
+						<ol class="col">
+							<li>Fill rocks glass with ice</li>
+							<li>Pour Vodka (30ml), Coffee liqueur (30ml) and Bailey's (30ml)</li>
+							<li>Stir</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#alex
+					" aria-expanded="false" aria-controls="collapseExample">
+				<!-- Drink goes here -->
+				Alexander's Sister
+			</button>
+			<div class="collapse" id="alex">
+				<div class=" card card-body">
+					<div class="row">
+						<!-- Recipe goes here -->
+						<ul class="col">
+							<li>Gin</li>
+							<li>Creme de Menthe</li>
+							<li>Cream</li>
+							<li>Ice</li>
+						</ul>
+						<ol class="col">
+							<li>Fill shaker with ice</li>
+							<li>Pour Gin (40ml), Creme de Menthe (30ml), and Cream (30ml)</li>
+							<li>Shake well and strain into cocktail glass</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#b52
+					" aria-expanded="false" aria-controls="collapseExample">
+				<!-- Drink goes here -->
+				B-52
+			</button>
+			<div class="collapse" id="b52">
+				<div class=" card card-body">
+					<div class="row">
+						<!-- Recipe goes here -->
+						<ul class="col">
+							<li>Kahlua</li>
+							<li>Bailey's</li>
+							<li>Cointreau (Triple Sec)</li>
+						</ul>
+						<ol class="col">
+							<li>Pour Kahlua (20ml) into shooter glass</li>
+							<li>Carefully pour Bailey's (20ml) on top of Kahlua</li>
+							<li>Carefully pour Cointreau (20ml) on top of Bailey's</li>
+							<li>Serve flamed and drink flamed using a long straw</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#boulvardier
+					" aria-expanded="false" aria-controls="collapseExample">
+				<!-- Drink goes here -->
+				Boulvardier
+			</button>
+			<div class="collapse" id="boulvardier">
+				<div class=" card card-body">
+					<div class="row">
+						<!-- Recipe goes here -->
+						<ul class="col">
+							<li>Whiskey (or Burbon)</li>
+							<li>Red Vermouth</li>
+							<li>Campari</li>
+							<li>Orange Garnish</li>
+							<li>Ice</li>
+						</ul>
+						<ol class="col">
+							<li>Fill rocks glass with ice</li>
+							<li>Pour Bourbon/Whiskey (50ml), Vermouth (30ml), and Campari (30ml)</li>
+							<li>Garnish with orange peel</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#coloradobulldog
+					" aria-expanded="false" aria-controls="collapseExample">
+				<!-- Drink goes here -->
+				Colorado Bulldog
+			</button>
+			<div class="collapse" id="coloradobulldog">
+				<div class=" card card-body">
+					<div class="row">
+						<!-- Recipe goes here -->
+						<ul class="col">
+							<li>Vodka</li>
+							<li>Coffee Liqueur</li>
+							<li>Milk</li>
+							<li>Cola</li>
+							<li>Ice</li>
+						</ul>
+						<ol class="col">
+							<li></li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#dgs
+					" aria-expanded="false" aria-controls="collapseExample">
+				<!-- Drink goes here -->
+				Dirty Girl Scout
+			</button>
+			<div class="collapse" id="dgs">
+				<div class=" card card-body">
+					<div class="row">
+						<!-- Recipe goes here -->
+						<ul class="col">
+							<li>Vodka</li>
+							<li>Coffee Liqueur</li>
+							<li>Bailey's</li>
+							<li>Creme de Menthe</li>
+							<li>Ice</li>
+						</ul>
+						<ul class="col">
+							<li>Fill rocks glass with ice</li>
+							<li>Pour Vodka (30ml), Coffee liqueur (30ml), and Milk/Cream (20ml)</li>
+							<li>Top with cola</li>
+							<li>Stir</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#gibson
+					" aria-expanded="false" aria-controls="collapseExample">
+				<!-- Drink goes here -->
+				Gibson
+			</button>
+			<div class="collapse" id="gibson">
+				<div class=" card card-body">
+					<div class="row">
+						<!-- Recipe goes here -->
+						<ul class="col">
+							<li>Gin</li>
+							<li>Dry Vermouth</li>
+							<li>Ice</li>
+						</ul>
+						<ol class="col">
+							<li>Fill shake with ice, Gin (60ml), and Dry Vermouth (10ml)</li>
+							<li>Stir and strain into cocktail glass</li>
+							<li>Garnish with silverskin onion</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#highball
+					" aria-expanded="false" aria-controls="collapseExample">
+				<!-- Drink goes here -->
+				Highball
+			</button>
+			<div class="collapse" id="highball">
+				<div class=" card card-body">
+					<div class="row">
+						<!-- Recipe goes here -->
+						<ul class="col">
+							<li>Whiskey</li>
+							<li>Soda (Substitute Ginger Ale)</li>
+							<li>Ice</li>
+						</ul>
+						<ol class="col">
+							<li>Fill highball glass with ice</li>
+							<li>Pour Whiskey (60ml) and top with Soda/Ginger Ale</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#hottoddy
+					" aria-expanded="false" aria-controls="collapseExample">
+				<!-- Drink goes here -->
+				Hot Toddy
+			</button>
+			<div class="collapse" id="hottoddy">
+				<div class=" card card-body">
+					<div class="row">
+						<!-- Recipe goes here -->
+						<ul class="col">
+							<li>Honey</li>
+							<li>Whiskey</li>
+							<li>Lemon</li>
+							<li>Water</li>
+						</ul>
+						<ol class="col">
+							<li>Put Honey (1tsp), Brandy/Whiskey/Rum (45ml), and Lemon juice (10ml)</li>
+							<li>Fill with hot water or tea</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#irishcarbomb
+					" aria-expanded="false" aria-controls="collapseExample">
+				<!-- Drink goes here -->
+				Irish Car Bomb
+			</button>
+			<div class="collapse" id="irishcarbomb">
+				<div class=" card card-body">
+					<div class="row">
+						<!-- Recipe goes here -->
+						<ul class="col">
+							<li>Whiskey</li>
+							<li>Bailey's</li>
+							<li>Irish Stout</li>
+						</ul>
+						<ol class="col">
+							<li>Pour Stout (250ml) into pub glass</li>
+							<li>Pour Bailey's into a shot glass, gently add Whiskey (20ml)</li>
+							<li>Drop shot glass into Stout</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#irishcoffee
+					" aria-expanded="false" aria-controls="collapseExample">
+				<!-- Drink goes here -->
+				Irish Coffee
+			</button>
+			<div class="collapse" id="collapseExample">
+				<div class=" card card-body">
+					<div class="row">
+						<!-- Recipe goes here -->
+						<ul class="col">
+							<li>Whiskey</li>
+							<li>Coffee</li>
+							<li>Cream</li>
+							<li>Sugar</li>
+						</ul>
+						<ol class="col">
+							<li>Pour hot Coffee (80ml) into Irish coffee glass</li>
+							<li>Add Whiskey (40ml)</li>
+							<li>Add sugar (1tsp)</li>
+							<li>Layer cream on top</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#americano
+					" aria-expanded="false" aria-controls="collapseExample">
+				Americano
+			</button>
+			<div class="collapse" id="americano">
+				<div class=" card card-body">
+					<div class="row">
+						<ul class="col">
+							<li>Campari</li>
+							<li>Red Vermouth</li>
+							<li>Soda</li>
+							<li>Garnish with Orange or Lime</li>
+						</ul>
+						<ol class="col">
+							<li>Fill rocks glass with ice</li>
+							<li>Pour Campari (30ml) and Vermouth (30ml)</li>
+							<li>Top with Soda</li>
+							<li>Garnish with orange slice and lemon peel</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<div class="list-group-item filterDiv bitters">Top Shelf - Chocolate Bitters</div>
+			<div class="list-group-item filterDiv bitters">Top Shelf - Coffee Bitters</div>
+			<div class="list-group-item filterDiv bitters">Top Shelf - All Spice</div>
+			<div class="list-group-item filterDiv bitters">Janet Mador's - Citrus Bitters</div>
+
+			<div class="list-group-item filterDiv beer">Guinness</div>
+			<div class="list-group-item filterDiv beer">Asahi</div>
+			<div class="list-group-item filterDiv beer">Unibroue - Blanche de Chambley</div>
 		</div>
 	</div>
 
-	<div class="navbar-fixed-bottom">
+	<div class="navbar fixed-bottom ">
 		<p>&copy; 2018 Nathan Mador-House</p>
 	</div>
 
