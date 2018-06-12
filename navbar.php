@@ -8,9 +8,10 @@
 					<span class="caret"></span>
 				</a>
 				<div class="dropdown-menu">
-					<a class="dropdown-item" href="food.html">Food</a>
-					<a class="dropdown-item" href="tea.html">Tea List</a>
-					<a class="dropdown-item" href="alcohol.html">Alcohol</a>
+					<a class="dropdown-item" href="food.php">Food</a>
+					<a class="dropdown-item" href="tea.php">Tea List</a>
+					<a class="dropdown-item" href="alcohol.php">Alcohol</a>
+					<a class="dropdown-item" href="games.php">Games</a>
 				</div>
 			</li>
 			<li class="nav-item">

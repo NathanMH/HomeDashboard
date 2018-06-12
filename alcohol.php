@@ -1,64 +1,14 @@
 <html>
 
-<head>
-	<title>Chez Lara et Nate - Booze</title>
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
-	<script type="text/javascript" src="js/live.js"></script>
-	<script type="text/javascript" src="js/change-jumbotron.js"></script>
-	<script type="text/javascript" src="js/filter-list.js"></script>
-	<script type="text/javascript" src="js/jquery.simpleWeather.js"></script>
-	<script type="text/javascript" src="js/home-weather-function.js"></script>
-	<script type="text/javascript" src="js/comments.js"></script>
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-	<link rel="stylesheet" href="css/override.css">
-	<link rel="stylesheet" href="css/filter.css">
-</head>
+<?php include('header.php'); ?>
+<?php include('navbar.php'); ?>
 
 <body>
 
-	<!-- Navbar -->
-	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-		<a class="navbar-brand" href="/">L&N</a>
-		<ul class="navbar-nav">
-			<li class="nav-item dropdown">
-				<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-					Menu
-					<span class="caret"></span>
-				</a>
-				<div class="dropdown-menu">
-					<a class="dropdown-item" href="food.html">Food</a>
-					<a class="dropdown-item" href="tea.html">Tea List</a>
-					<a class="dropdown-item" href="alcohol.html">Alcohol</a>
-				</div>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="http://192.168.0.1">Router</a>
-			</li>
-
-			<li class="nav-item">
-				<a class="nav-link" href="http://192.168.0.16/admin/">Pi-Hole</a>
-			</li>
-			<li class="nav-item dropdown">
-				<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-					WebDev Previews
-					<span class="caret"></span>
-				</a>
-				<div class="nav-item dropdown-menu" role="menu">
-					<a class="dropdown-item" href="http://192.168.1.100:81">MusicNate</a>
-					<a class="dropdown-item" href="http://192.168.1.100:82">ProntoMusica</a>
-				</div>
-			</li>
-		</ul>
-		</div>
-	</nav>
-
-	<!-- Body -->
 	<div class="jumbotron">
 		<div class="container">
 			<h1> Chez Lara & Nate</h1>
 			<h2>Booze!</h2>
-
 		</div>
 	</div>
 
@@ -637,10 +587,8 @@
 		</div>
 	</div>
 
-	<div class="navbar fixed-bottom ">
-		<p>&copy; 2018 Nathan Mador-House</p>
-	</div>
-
 </body>
+
+<?php include('footer.php'); ?>
 
 </html>
