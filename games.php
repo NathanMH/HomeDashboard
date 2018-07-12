@@ -16,7 +16,7 @@
 		<div class="row-fluid">
 			<!-- Control buttons -->
 			<div class="text-center">
-				<div class="btn-group" role="toolbar">
+				<div class="btn-group flex-wrap" role="toolbar">
 					<button type="button" class="btn btn-primary" onclick="filterSelection('all')">Show All</button>
 					<button type="button" class="btn btn-primary" onclick="filterSelection('strategy')">Strategy</button>
 					<button type="button" class="btn btn-primary" onclick="filterSelection('casual')">Casual</button>
