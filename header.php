@@ -1,5 +1,6 @@
 <head>
 	<title>Chez Lara et Nate</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 	<script type="text/javascript" src="js/live.js"></script>
 	<script type="text/javascript" src="js/change-jumbotron.js"></script>
 	<script type="text/javascript" src="js/filter-list.js"></script>
