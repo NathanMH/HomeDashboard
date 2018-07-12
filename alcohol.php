@@ -49,7 +49,7 @@
 				Negroni
 			</button>
 			<div class="collapse" id="negroni">
-				<div class="card card-body row">
+				<div class="card card-body">
 					<div class="row">
 						<ul class="col">
 							<li>Gin</li>
