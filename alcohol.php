@@ -45,15 +45,12 @@
 			<div class="list-group-item filterDiv liquor">Sweet Vermouth</div>
 			<div class="list-group-item filterDiv liquor">Dry Vermouth</div>
 
-			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#negroni
-					" aria-expanded="false" aria-controls="collapseExample">
-				<!-- Drink goes here -->
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#negroni">
 				Negroni
 			</button>
 			<div class="collapse" id="negroni">
 				<div class="card card-body row">
 					<div class="row">
-						<!-- Recipe goes here -->
 						<ul class="col">
 							<li>Gin</li>
 							<li>Campari</li>
@@ -70,15 +67,12 @@
 				</div>
 			</div>
 
-			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#gt
-					" aria-expanded="false" aria-controls="collapseExample">
-				<!-- Drink goes here -->
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#gt">
 				Gin & Tonic
 			</button>
 			<div class="collapse" id="gt">
 				<div class=" card card-body">
 					<div class="row">
-						<!-- Recipe goes here -->
 						<ul class="col">
 							<li>Gin</li>
 							<li>Tonic</li>
@@ -94,15 +88,12 @@
 				</div>
 			</div>
 
-			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#sneakypete
-					" aria-expanded="false" aria-controls="collapseExample">
-				<!-- Drink goes here -->
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#sneakypete">
 				Sneaky Pete
 			</button>
 			<div class="collapse" id="sneakypete">
 				<div class=" card card-body">
 					<div class="row">
-						<!-- Recipe goes here -->
 						<ul class="col">
 							<li>Whiskey</li>
 							<li>Coffee Liqueur</li>
@@ -118,15 +109,12 @@
 				</div>
 			</div>
 
-			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#whitelady
-					" aria-expanded="false" aria-controls="collapseExample">
-				<!-- Drink goes here -->
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#whitelady">
 				White Lady
 			</button>
 			<div class="collapse" id="whitelady">
 				<div class=" card card-body">
 					<div class="row">
-						<!-- Recipe goes here -->
 						<ul class="col">
 							<li>Gin</li>
 							<li>Triple Sec</li>
@@ -142,15 +130,12 @@
 				</div>
 			</div>
 
-			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#whiterussian
-					" aria-expanded="false" aria-controls="collapseExample">
-				<!-- Drink goes here -->
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#whiterussian">
 				White Russian
 			</button>
 			<div class="collapse" id="whiterussian">
 				<div class=" card card-body">
 					<div class="row">
-						<!-- Recipe goes here -->
 						<ul class="col">
 							<li>Vodka</li>
 							<li>Coffee Liqueur</li>
@@ -166,15 +151,12 @@
 				</div>
 			</div>
 
-			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#blackrussian
-					" aria-expanded="false" aria-controls="collapseExample">
-				<!-- Drink goes here -->
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#blackrussian">
 				Black Russian
 			</button>
 			<div class="collapse" id="blackrussian">
 				<div class=" card card-body">
 					<div class="row">
-						<!-- Recipe goes here -->
 						<ul class="col">
 							<li>Vodka</li>
 							<li>Coffee Liqueur</li>
@@ -189,15 +171,12 @@
 				</div>
 			</div>
 
-			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#kamikaze
-					" aria-expanded="false" aria-controls="collapseExample">
-				<!-- Drink goes here -->
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#kamikaze">
 				Kamikaze
 			</button>
 			<div class="collapse" id="kamikaze">
 				<div class=" card card-body">
 					<div class="row">
-						<!-- Recipe goes here -->
 						<ul class="col">
 							<li>Vodka</li>
 							<li>Triple Sec</li>
@@ -213,15 +192,12 @@
 				</div>
 			</div>
 
-			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#martini
-					" aria-expanded="false" aria-controls="collapseExample">
-				<!-- Drink goes here -->
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#martini">
 				Martini
 			</button>
 			<div class="collapse" id="martini">
 				<div class=" card card-body">
 					<div class="row">
-						<!-- Recipe goes here -->
 						<ul class="col">
 							<li>Vodka / Gin</li>
 							<li>Dry Vermouth</li>
@@ -237,15 +213,12 @@
 				</div>
 			</div>
 
-			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#mintjulep
-					" aria-expanded="false" aria-controls="collapseExample">
-				<!-- Drink goes here -->
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#mintjulep">
 				Mint Julep
 			</button>
 			<div class="collapse" id="mintjulep">
 				<div class=" card card-body">
 					<div class="row">
-						<!-- Recipe goes here -->
 						<ul class="col">
 							<li>Vodka</li>
 							<li>Sugar</li>
@@ -262,15 +235,12 @@
 				</div>
 			</div>
 
-			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#mojito
-					" aria-expanded="false" aria-controls="collapseExample">
-				<!-- Drink goes here -->
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#mojito">
 				Mojito
 			</button>
 			<div class="collapse" id="mojito">
 				<div class=" card card-body">
 					<div class="row">
-						<!-- Recipe goes here -->
 						<ul class="col">
 							<li>White Rum</li>
 							<li>Lime</li>
@@ -290,15 +260,12 @@
 				</div>
 			</div>
 
-			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#mudslide
-					" aria-expanded="false" aria-controls="collapseExample">
-				<!-- Drink goes here -->
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#mudslide">
 				Mudslide
 			</button>
 			<div class="collapse" id="mudslide">
 				<div class=" card card-body">
 					<div class="row">
-						<!-- Recipe goes here -->
 						<ul class="col">
 							<li>Vodka</li>
 							<li>Coffee Liqueur</li>
@@ -314,15 +281,12 @@
 				</div>
 			</div>
 
-			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#alex
-					" aria-expanded="false" aria-controls="collapseExample">
-				<!-- Drink goes here -->
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#alex">
 				Alexander's Sister
 			</button>
 			<div class="collapse" id="alex">
 				<div class=" card card-body">
 					<div class="row">
-						<!-- Recipe goes here -->
 						<ul class="col">
 							<li>Gin</li>
 							<li>Creme de Menthe</li>
@@ -338,15 +302,12 @@
 				</div>
 			</div>
 
-			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#b52
-					" aria-expanded="false" aria-controls="collapseExample">
-				<!-- Drink goes here -->
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#b52">
 				B-52
 			</button>
 			<div class="collapse" id="b52">
 				<div class=" card card-body">
 					<div class="row">
-						<!-- Recipe goes here -->
 						<ul class="col">
 							<li>Kahlua</li>
 							<li>Bailey's</li>
@@ -362,15 +323,12 @@
 				</div>
 			</div>
 
-			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#boulvardier
-					" aria-expanded="false" aria-controls="collapseExample">
-				<!-- Drink goes here -->
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#boulvardier">
 				Boulvardier
 			</button>
 			<div class="collapse" id="boulvardier">
 				<div class=" card card-body">
 					<div class="row">
-						<!-- Recipe goes here -->
 						<ul class="col">
 							<li>Whiskey (or Burbon)</li>
 							<li>Red Vermouth</li>
@@ -388,15 +346,12 @@
 			</div>
 
 
-			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#coloradobulldog
-					" aria-expanded="false" aria-controls="collapseExample">
-				<!-- Drink goes here -->
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#coloradobulldog">
 				Colorado Bulldog
 			</button>
 			<div class="collapse" id="coloradobulldog">
 				<div class=" card card-body">
 					<div class="row">
-						<!-- Recipe goes here -->
 						<ul class="col">
 							<li>Vodka</li>
 							<li>Coffee Liqueur</li>
@@ -411,15 +366,12 @@
 				</div>
 			</div>
 
-			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#dgs
-					" aria-expanded="false" aria-controls="collapseExample">
-				<!-- Drink goes here -->
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#dgs">
 				Dirty Girl Scout
 			</button>
 			<div class="collapse" id="dgs">
 				<div class=" card card-body">
 					<div class="row">
-						<!-- Recipe goes here -->
 						<ul class="col">
 							<li>Vodka</li>
 							<li>Coffee Liqueur</li>
@@ -437,15 +389,12 @@
 				</div>
 			</div>
 
-			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#gibson
-					" aria-expanded="false" aria-controls="collapseExample">
-				<!-- Drink goes here -->
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#gibson">
 				Gibson
 			</button>
 			<div class="collapse" id="gibson">
 				<div class=" card card-body">
 					<div class="row">
-						<!-- Recipe goes here -->
 						<ul class="col">
 							<li>Gin</li>
 							<li>Dry Vermouth</li>
@@ -460,15 +409,12 @@
 				</div>
 			</div>
 
-			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#highball
-					" aria-expanded="false" aria-controls="collapseExample">
-				<!-- Drink goes here -->
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#highball">
 				Highball
 			</button>
 			<div class="collapse" id="highball">
 				<div class=" card card-body">
 					<div class="row">
-						<!-- Recipe goes here -->
 						<ul class="col">
 							<li>Whiskey</li>
 							<li>Soda (Substitute Ginger Ale)</li>
@@ -482,15 +428,12 @@
 				</div>
 			</div>
 
-			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#hottoddy
-					" aria-expanded="false" aria-controls="collapseExample">
-				<!-- Drink goes here -->
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#hottoddy">
 				Hot Toddy
 			</button>
 			<div class="collapse" id="hottoddy">
 				<div class=" card card-body">
 					<div class="row">
-						<!-- Recipe goes here -->
 						<ul class="col">
 							<li>Honey</li>
 							<li>Whiskey</li>
@@ -505,15 +448,12 @@
 				</div>
 			</div>
 
-			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#irishcarbomb
-					" aria-expanded="false" aria-controls="collapseExample">
-				<!-- Drink goes here -->
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#irishcarbomb">
 				Irish Car Bomb
 			</button>
 			<div class="collapse" id="irishcarbomb">
 				<div class=" card card-body">
 					<div class="row">
-						<!-- Recipe goes here -->
 						<ul class="col">
 							<li>Whiskey</li>
 							<li>Bailey's</li>
@@ -528,15 +468,12 @@
 				</div>
 			</div>
 
-			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#irishcoffee
-					" aria-expanded="false" aria-controls="collapseExample">
-				<!-- Drink goes here -->
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#irishcoffee">
 				Irish Coffee
 			</button>
 			<div class="collapse" id="irishcoffee">
 				<div class="card card-body">
 					<div class="row">
-						<!-- Recipe goes here -->
 						<ul class="col">
 							<li>Whiskey</li>
 							<li>Coffee</li>
@@ -553,8 +490,7 @@
 				</div>
 			</div>
 
-			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#americano
-					" aria-expanded="false" aria-controls="collapseExample">
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#americano">
 				Americano
 			</button>
 			<div class="collapse" id="americano">
