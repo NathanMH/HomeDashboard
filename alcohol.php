@@ -48,7 +48,7 @@
 			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#negroni">
 				Negroni
 			</button>
-			<div class="collapse" id="negroni">
+			<div class="collapse in" id="negroni">
 				<div class="card card-body">
 					<div class="row">
 						<ul class="col">
