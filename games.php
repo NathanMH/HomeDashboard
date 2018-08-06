@@ -103,7 +103,7 @@
 				</div>
 			</div>
 
-			<button class="list-group-item filterDiv strategy" type="button" data-toggle="collapse" data-target="#monopolydeal">
+			<button class="list-group-item filterDiv casual" type="button" data-toggle="collapse" data-target="#monopolydeal">
 				Monopoly Deal
 			</button>
 			<div class="collapse" id="monopolydeal">
@@ -114,7 +114,7 @@
 				</div>
 			</div>
 
-			<button class="list-group-item filterDiv strategy" type="button" data-toggle="collapse" data-target="#pandemic">
+			<button class="list-group-item filterDiv coop strategy" type="button" data-toggle="collapse" data-target="#pandemic">
 				Pandemic
 			</button>
 			<div class="collapse" id="pandemic">
@@ -125,7 +125,7 @@
 				</div>
 			</div>
 
-			<button class="list-group-item filterDiv strategy" type="button" data-toggle="collapse" data-target="#5minutedungeon">
+			<button class="list-group-item filterDiv casual coop" type="button" data-toggle="collapse" data-target="#5minutedungeon">
 				5 Minute Dungeon
 			</button>
 			<div class="collapse" id="5minutedungeon">
@@ -137,7 +137,7 @@
 				</div>
 			</div>
 
-			<button class="list-group-item filterDiv strategy" type="button" data-toggle="collapse" data-target="#codenames">
+			<button class="list-group-item filterDiv word casual" type="button" data-toggle="collapse" data-target="#codenames">
 				Codenames
 			</button>
 			<div class="collapse" id="codenames">
@@ -148,7 +148,7 @@
 				</div>
 			</div>
 
-			<button class="list-group-item filterDiv strategy" type="button" data-toggle="collapse" data-target="#anomia">
+			<button class="list-group-item filterDiv word" type="button" data-toggle="collapse" data-target="#anomia">
 				Anomia
 			</button>
 			<div class="collapse" id="anomia">
@@ -161,7 +161,7 @@
 				</div>
 			</div>
 
-			<button class="list-group-item filterDiv strategy" type="button" data-toggle="collapse" data-target="#qwirkle">
+			<button class="list-group-item filterDiv strategy casual" type="button" data-toggle="collapse" data-target="#qwirkle">
 				Qwirkle
 			</button>
 			<div class="collapse" id="qwirkle">
@@ -175,7 +175,7 @@
 				</div>
 			</div>
 
-			<button class="list-group-item filterDiv strategy" type="button" data-toggle="collapse" data-target="#whatdoyoumeme">
+			<button class="list-group-item filterDiv casual" type="button" data-toggle="collapse" data-target="#whatdoyoumeme">
 				What Do You Meme?!
 			</button>
 			<div class="collapse" id="whatdoyoumeme">
@@ -186,7 +186,7 @@
 				</div>
 			</div>
 
-			<button class="list-group-item filterDiv strategy" type="button" data-toggle="collapse" data-target="#quiddler">
+			<button class="list-group-item filterDiv casual word" type="button" data-toggle="collapse" data-target="#quiddler">
 				Quiddler
 			</button>
 			<div class="collapse" id="quiddler">
@@ -197,7 +197,7 @@
 				</div>
 			</div>
 
-			<button class="list-group-item filterDiv strategy" type="button" data-toggle="collapse" data-target="#balderdash">
+			<button class="list-group-item filterDiv word" type="button" data-toggle="collapse" data-target="#balderdash">
 				Balderdash
 			</button>
 			<div class="collapse" id="balderdash">
@@ -208,7 +208,7 @@
 				</div>
 			</div>
 
-			<button class="list-group-item filterDiv strategy" type="button" data-toggle="collapse" data-target="#boggle">
+			<button class="list-group-item filterDiv word" type="button" data-toggle="collapse" data-target="#boggle">
 				Boggle
 			</button>
 			<div class="collapse" id="boggle">
@@ -219,7 +219,7 @@
 				</div>
 			</div>
 
-			<button class="list-group-item filterDiv strategy" type="button" data-toggle="collapse" data-target="#bang">
+			<button class="list-group-item filterDiv casual" type="button" data-toggle="collapse" data-target="#bang">
 				Bang!
 			</button>
 			<div class="collapse" id="bang">
@@ -230,8 +230,7 @@
 				</div>
 			</div>
 
-            <div class="list-group-item filterDiv strategy"></div>
-			<button class="list-group-item filterDiv strategy" type="button" data-toggle="collapse" data-target="#globetrotters">
+			<button class="list-group-item filterDiv casual strategy" type="button" data-toggle="collapse" data-target="#globetrotters">
 				Globe Trotters
 			</button>
 			<div class="collapse" id="globetrotters">
