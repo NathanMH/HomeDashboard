@@ -13,13 +13,33 @@
 	</div>
 
 	<div class="container">
-			<div class="list-group-item">AeroPress</div>
 
-			<button class="list-group-item filterDiv strategy" type="button" data-toggle="collapse" data-target="#aeropress">
+			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#negroni">
+				Negroni
+			</button>
+			<div class="collapse" id="negroni">
+				<div class="card card-body">
+					<div class="row">
+						<ul class="col">
+							<li>Gin</li>
+							<li>Campari</li>
+							<li>Red Vermouth</li>
+							<li>Orange Garnish</li>
+							<li>Ice</li>
+						</ul>
+						<ol class="col">
+							<li>Fill rocks glass with ice</li>
+							<li>Shake Gin (30ml), Vermouth (30ml), and Campari (30ml)</li>
+							<li>Strain into glass and garnish</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<button class="list-group-item" type="button" data-toggle="collapse" data-target="#aeropress">
 				AeroPress
 			</button>
 			<div class="collapse" id="aeropress">
-
 				<div class="card card-body">
 					<div class="row">
 						<ul class="col">
