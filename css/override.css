@@ -1,3 +1,7 @@
 #forecast {
     display: inline;
 }
+
+button:hover:focus {
+    border: 4px solid #0060DF;
+}
