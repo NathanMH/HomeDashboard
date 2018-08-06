@@ -15,6 +15,7 @@
 		  <a class="dropdown-item" href="food.php">Food</a>
 		  <a class="dropdown-item" href="tea.php">Tea List</a>
 		  <a class="dropdown-item" href="alcohol.php">Alcohol</a>
+		  <a class="dropdown-item" href="coffee.php">Coffee</a>
 		  <a class="dropdown-item" href="games.php">Games</a>
         </div>
       </li>
