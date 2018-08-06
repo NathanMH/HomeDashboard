@@ -50,7 +50,7 @@
 			</div>
 
 			<button class="list-group-item" type="button" data-toggle="collapse" data-target="#frenchpress">
-				AeroPress
+				French Press
 			</button>
 			<div class="collapse" id="frenchpress">
 				<div class="card card-body">
