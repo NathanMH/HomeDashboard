@@ -45,10 +45,10 @@
 			<div class="list-group-item filterDiv liquor">Sweet Vermouth</div>
 			<div class="list-group-item filterDiv liquor">Dry Vermouth</div>
 
-			<button class="list-group-item filterDiv mixed" type="button" data-toggle="collapse" data-target="#negroni">
+			<button class="list-group-item filterDiv mixed show" type="button" data-toggle="collapse" data-target="#negroni">
 				Negroni
 			</button>
-			<div class="collapse in" id="negroni">
+			<div class="collapse" id="negroni">
 				<div class="card card-body">
 					<div class="row">
 						<ul class="col">
